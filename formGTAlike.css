@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* div{
+    border: 1px solid gray;
+} */
+
+body{
+    background-image: url(project-img/backgroun100.png);
+    background-repeat: repeat;
+    background-size: cover;
+  
+}
+
+nav{
+    background-color: #110c23;
+    display: flex;
+    align-items: baseline;
+    justify-items: center;
+    height: 90px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: 3px solid rgb(250, 217, 167);
+}
+
+.menu-header img{
+    height: 55px;
+    width: 160px;
+}
+
+.header-opt{
+    padding: 10px;
+    height: 70px;
+    display: flex;
+
+}
+
+.menu-header a{
+    padding-right: 10px;
+    margin-left: 20px;
+    border-right: 1px solid #fff;
+    font-size: 21px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+/* TITULO + ANIMAÇÃO */
+
+
+.welcome{
+    /* border: 2px solid gray; */
+    color: #ffff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.welcome h1, .welcome h2{
+    text-shadow: 1px 2px 3px rgb(255, 0, 170);
+}
+
+.welcome img{
+    padding-left: 20px;
+    width: 240px;
+    height: 200px;
+    animation: neon 2s alternate infinite ease-in-out;
+}
+
+.logo-gta{
+    --cor-neon:#ff00ea;
+}
+
+/* AJUSTE DA VARIAVEL DA ANIMAÇÃO */
+
+@keyframes neon{
+    from{
+        filter: drop-shadow(0 0 0 var(--cor-neon));
+
+    }
+
+    to {
+        filter: drop-shadow(0 0 30px var(--cor-neon));
+    }
+}
+
+/* DIV PRINCIPAL (FORMULÁRIO) */
+
+.principal-div{
+    max-width: 500px;
+    background-color: white;
+}
+.cont-form{
+    background-color: #110c23;
+    height: 500px;
+    width: 500px;
+    border:3px solid rgb(250, 217, 167);
+    border-radius: 12px;
+    margin-top: 40px;
+    margin:80px 40px;
+}
+.forms{
+    color: white;
+}
+
+
+.opt-manterlogin a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+
+}
+.opt-manterlogin input{
+    width: 20px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    
+}
+
+.text-manter{
+    margin-left: 30px;
+
+}
+
+.opt-manterlogin button{
+    background-color: whitesmoke;
+    width: 70px;
+    height: 40px;
+    color: black;
+}
+
+.opt-manterlogin button:hover{
+    background-color: cornflowerblue;
+    color:white;
+    transition: 2ms;
+}
+
+.criar-conta a{
+    color:burlywood;
+    text-decoration: none;
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: burlywood;
+    width: 100%;
+    height: 200px;
+}
