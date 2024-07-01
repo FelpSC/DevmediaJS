@@ -107,14 +107,28 @@ nav{
 }
 
 
-.opt-manterlogin a{
+/* .opt-manterlogin a{
     font-size: 18px;
     color: white;
     text-decoration: none;
 
+} */
+
+.opt-manterlogin input::after{
+    display: flex;
+    content: "Manter-me Conectado";
+    margin-left: 35px;
+    width: 200px;
+    font-size: 18px;
+    position: relative;
+    bottom: 5px;
+    color: white;
 }
+
 .opt-manterlogin input{
-    width: 20px;
+    margin-top: 40px;
+    height: 18px;
+    width: 30px;
     border: 1px solid black;
     color: black;
     cursor: pointer;
@@ -127,6 +141,7 @@ nav{
 }
 
 .opt-manterlogin button{
+    display: flex;
     background-color: whitesmoke;
     width: 70px;
     height: 40px;
