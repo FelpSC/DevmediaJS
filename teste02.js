@@ -1,21 +1,13 @@
-let lista_numeros = [1, 3, 5, 10];
+const produtos = [
+  { id: 1, nome: 'Açucar', estoque: 100, valor: 2.00 },
+  { id: 2, nome: 'Álcool 70', estoque: 50, valor: 9.95 },
+  { id: 3, nome: 'Luvas descartáveis', estoque: 1000, valor: 2.50 },
+];
 
-const retorna_soma = (numeros) => {
-
-  let soma = 0;
-
-  for (const numero of numeros){
-    soma = numero + soma;
-  }
-
-  return soma;
-
+function imprimirProduto (produto, index) {
+  console.log( index + ' - ' + produto.nome + '\n  - Estoque:  ' + produto.estoque+'Und \n');
+  
 }
 
-let resultado = retorna_soma(lista_numeros);
-
-console.log("A soma dos resultados é igual a : "+resultado);
-
-let nome = "minuscule";
-
-console.log(nome.toUpperCase());
+produtos.push('1', 'feijão')
+produtos.forEach(imprimirProduto);
