@@ -49,6 +49,23 @@ nav{
 
 }
 
+.data-hora {
+    background-color: #110c23;
+    color: #FFF;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 12px;
+    
+    
+}
+
+.mensagem-warning{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+
+}
+
 /* TITULO + ANIMAÇÃO */
 
 

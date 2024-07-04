@@ -19,9 +19,48 @@
                 <a href="">Suporte</a>
             </p>
 
+            <div class="d-flex flex-column ms-auto">
+                <p id="dataHora" class="data-hora"></p>
+                <p id="mensagem-data" class="mensagem-warning"></p>
+            </div>
+
+
+
+
         </div>
        
     </nav>
+
+
+    <!-- DATA E HORA ATUAL -->
+
+
+    <script>
+        function atualizaData () {
+            // INFORMA DATA E HORA ATUAL
+
+            var mensagem = "Já está atrasado Felps !";
+            var agora = new Date();
+            var dataHoraString = agora.toLocaleString('pt-BR');
+            document.getElementById('dataHora').textContent = dataHoraString;
+
+            // EXIBE MENSAGEM CASO FORA 12:30
+
+            if (agora.getHours() === 12 && agora.getMinutes() >= 30){
+                document.getElementById('mensagem-data').textContent = mensagem;
+            }else{
+                document.getElementById('mensagem-data').textContent = ' ';
+            }
+
+        }
+        setInterval(atualizaData, 1000);
+
+    </script>
+
+
+    <!-- MENSAGEM DE BOAS VINDAS -->
+
+
     <div class="welcome container-fluid p-2 col-10">
         <div class="text-welcome">
             <h1>Welcome to <img src="project-img/vicecitylogo.png" class="logo-gta"></h1>
