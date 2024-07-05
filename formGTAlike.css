@@ -49,6 +49,13 @@ nav{
 
 }
 
+.info-data-hora{
+    text-align: center;
+    /* border: 1px solid white; */
+    position: relative;
+    right: 430px;
+}
+
 .data-hora {
     background-color: #110c23;
     color: #FFF;
@@ -174,6 +181,12 @@ nav{
 .criar-conta a{
     color:burlywood;
     text-decoration: none;
+
+}
+
+.msg-email-mail{
+    color: red;
+    font-size: 12px;
 
 }
 
