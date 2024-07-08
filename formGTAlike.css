@@ -184,11 +184,7 @@ nav{
 
 }
 
-.msg-email-mail{
-    color: red;
-    font-size: 12px;
 
-}
 
 footer{
     display: flex;
@@ -197,4 +193,12 @@ footer{
     color: burlywood;
     width: 100%;
     height: 200px;
+}
+
+#msg-email{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+
 }
