@@ -49,12 +49,8 @@ nav{
 
 }
 
-.info-data-hora{
-    text-align: center;
-    /* border: 1px solid white; */
-    position: relative;
-    right: 430px;
-}
+
+
 
 .data-hora {
     background-color: #110c23;
@@ -184,8 +180,6 @@ nav{
 
 }
 
-
-
 footer{
     display: flex;
     justify-content: center;
@@ -193,12 +187,4 @@ footer{
     color: burlywood;
     width: 100%;
     height: 200px;
-}
-
-#msg-email{
-    color: red;
-    font-size: 12px;
-    font-style: italic;
-    display: none;
-
 }
