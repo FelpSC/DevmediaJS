@@ -79,7 +79,8 @@
                 <div class="container">
                     <label for="" class="p-1">E-mail</label>
                     <input type="text" id="email" class="form-control col-5">
-                    <div id="msg-email" class="p-1">usuario</div>
+                    <span id="msg-email" class="p-1"></span>
+                    <span id="msg-email-sucess" class="p-1"></span>
                     <label for="" class="p-1 pt-3">Senha</label>
                     <input type="text" id="senha" class="form-control col-5">
                     <p id="msg-senha" class="p-1 msg-erro-senha"></p>
@@ -89,42 +90,44 @@
                 
                     <input type="checkbox" id="check-mantconect" class="me-2">
 
-                    <button class="btn ms-auto mt-5" id="btn-enviar" onclick="login()" type="submit">Iniciar</button>
+                    <button class="btn ms-auto mt-5" id="btn-enviar"  onclick="emailValidacao()" type="submit">Iniciar</button>
                 </div>
                 <hr>
 
                 <!-- NÃO RESOLVIDO (IMPRIMIR MENSAGEM AO CLICAR NO BOTÃO) -->
 
                 <script>
+                
+                    const btnEnviar = document.getElementById('btn-enviar');
+                     btnEnviar.addEventListener( 'click', () => {
+                        verificaEmail();
+                        setInterval(verificaEmail, 1000);
+                        
+                    });
 
-                    function login(){
-                        const usuario = document.getElementById('email').value;
-                        const senha = document.getElementById('senha').value;
+                    function verificaEmail(){
+                        var msgErro = "E-mail Inválido";
+                        var msgSucess = "Bem Vindo!";
+                        var msgInsira = "Insira Um E-mail";
+                        var usuario = document.getElementById('email').value;
+                        var senha = document.getElementById('senha').value;
                         const emailvalido = "felipetoral1998@gmail.com";
                         const senhavalida = "help";
-                       
-                        // const button = document.getElementById('btn-enviar');
 
-                        if( usuario == emailvalido && senha == senhavalida){
-                            document.getElementById('msg-email').style.display = "none";
+
+                        if (usuario == emailvalido){
+                           document.getElementById('msg-email-sucess').textContent = msgSucess;
+                           
+
+                        }else if(!usuario){
+                            document.getElementById('msg-erro-email').textContent = msgInsira;
+
                         }else{
-                            document.getElementById('msg-email').style.display = "inline";
-                        
+                            document.getElementById('msg-erro-email').textContent = msgErro;
+                            
+                            
                         }
-
-
-                        // button.addEventListener('click', () =>{
-                        //     var usuarioCadastrado = 'felipetoral1998@gmail.com';
-
-                        //     if( !usuario){
-                        //         documen.getElementById('msg-email').style.display = "block";
-                        //     }
-
-                        // });
                     }
-                        
-
-
 
                 </script>
 
