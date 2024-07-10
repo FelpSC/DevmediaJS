@@ -20,7 +20,7 @@
                 <a href="">Suporte</a>
             </p>
 
-            <div class="info-data-hora d-flex flex-column">
+            <div class="info-data-hora">
                 <p id="dataHora" class="data-hora"></p>
                 <p id="mensagem-data" class="mensagem-warning"></p>
             </div>
@@ -90,7 +90,7 @@
                 
                     <input type="checkbox" id="check-mantconect" class="me-2">
 
-                    <button class="btn ms-auto mt-5" id="btn-enviar"  onclick="emailValidacao()" type="submit">Iniciar</button>
+                    <button class="btn ms-auto mt-5" id="btn-enviar" onchange="verificaEmail()" type="submit">Iniciar</button>
                 </div>
                 <hr>
 
@@ -98,12 +98,12 @@
 
                 <script>
                 
-                    const btnEnviar = document.getElementById('btn-enviar');
-                     btnEnviar.addEventListener( 'click', () => {
-                        verificaEmail();
-                        setInterval(verificaEmail, 1000);
+                    // const btnEnviar = document.getElementById('btn-enviar');
+                    // btnEnviar.addEventListener( 'click', () => {
+                    //     verificaEmail();
+                    //     setInterval(verificaEmail, 1000);
                         
-                    });
+                    // });
 
                     function verificaEmail(){
                         var msgErro = "E-mail Inválido";
@@ -128,6 +128,7 @@
                             
                         }
                     }
+                    setInterval(verificaEmail, 1000);
 
                 </script>
 

@@ -50,7 +50,13 @@ nav{
 }
 
 
-
+.info-data-hora{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 400px;
+    
+}
 
 .data-hora {
     background-color: #110c23;
