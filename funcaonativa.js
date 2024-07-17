@@ -33,6 +33,31 @@ console.log(array);
 // ]
 // ------------------------------------------------------------------------------------------
 
+// REMOVENDO ELEMENTOS 
+
+// splice(), pop() e shift()
+
+// split() : Remove elementos de um Array com base em posição
+// Exemplo : 
+  
+const arraysplice = [
+  'Doming',
+  'Segunda',
+  'Terça',
+  'Quarta',
+  'Quinta',
+  'Sexta',
+]
+
+arraysplit.splice(2,1); //COLECAO + FUNCAO (2,1); (posição no Array + número de elementos)
+
+console.log(arraysplit); // Vai remover "Terça"
+
+// pop() = Remove o primeiro elemento do Array
+// shift() = Remove o ultimo elemento do Array
+
+// --------------------------------------------------------------------------------------------------
+
 //.forEach()
 
 //forEach() == Percorre o Array e para cada item ele executa uma função
@@ -138,6 +163,8 @@ const valorAPagar = itensCarrinho.reduce(somarValor, 10);
 
 console.log(valorAPagar);
 
+// vai imprimir o calculo que é == 170.85
+
 // ------------------------------------------------------------------------------------------
 
 
@@ -150,3 +177,7 @@ console.log(valorAPagar);
 const nomes = ['Felps', 'Bruno','Tiago','Adriana','Valdomiro'];
 
 console.log(nomes.sort());
+
+
+
+
