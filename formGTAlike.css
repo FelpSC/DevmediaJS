@@ -130,7 +130,7 @@ nav{
     border-bottom: 1px solid #ff00ea;
     border-right: 1px solid #ff00ea;
     border-style:groove;
-    animation: neon 2s alternate ease-in-out;
+    animation: neon 2s alternate infinite ease-in-out;
     --cor-neon:#ff00ea;
     
     
