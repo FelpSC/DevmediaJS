@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.caixa{
+    margin: 200px;
+    text-align: center;
+    height: 240px;
+    border-radius: 13px;
+}
+
+.logopne-lamp{
+    margin: 100px;
+    width: 200px;
+    height: 200px;
+    animation: neonlamp 3s alternate forwards ease-in-out;
+}
+
+.fonte-neon{
+    width: 600px;
+    height: 160px;
+    --cor-font: #ffffff;
+    animation: neonfont 3s alternate forwards ease-in-out;
+}
+
+
+.logopne-lamp{
+    --cor-neon:#ffa622;
+}
+
+@keyframes neonfont{
+    from{
+        filter: drop-shadow(0 0 0 var(--cor-font));
+    }
+    to{
+        filter: drop-shadow(0 0 3px var(--cor-font));
+    }
+    
+}
+
+@keyframes neonlamp{
+
+    from{
+        filter: drop-shadow(0 0 0 var(--cor-neon));
+        
+    }
+
+    to{
+        filter: drop-shadow(0 0 75px var(--cor-neon));
+        
+    }
+    
+}
