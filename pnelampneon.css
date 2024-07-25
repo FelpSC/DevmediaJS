@@ -21,7 +21,7 @@
 .fonte-neon{
     width: 600px;
     height: 160px;
-    --cor-font: #ffffff;
+    --cor-font: rgb(255, 244, 229);
     animation: neonfont 3s alternate forwards ease-in-out;
 }
 
