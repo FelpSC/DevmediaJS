@@ -8,10 +8,12 @@ h3{
     font-family: sans-serif;
     color: white;
     text-align: center;
-    margin-top: 20px;
+    
 }
 
+
 .caixa{
+    
     margin: 200px;
     min-height: 180px;
     max-height: 500px;
@@ -20,16 +22,16 @@ h3{
 }
 
 .logopne-lamp{
-    padding: 0;
     margin: 100px;
-    width: 200px;
+    min-width: 100px;
+    max-width: 200px;
     min-height: 100px;
     max-height: 240px;
     animation: neonlamp 3s alternate forwards ease-in-out;
 }
 
 .fonte-neon{
-    min-width: 300px;
+    min-width: 200px;
     max-width: 600px;
     min-height: 100px;
     max-height: 200px;
