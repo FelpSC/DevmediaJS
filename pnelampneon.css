@@ -6,21 +6,28 @@
 
 .caixa{
     margin: 200px;
-    text-align: center;
-    height: 240px;
+    min-height: 180px;
+    max-height: 500px;
     border-radius: 13px;
+    border: 0.1em solid #ffffff;
 }
 
 .logopne-lamp{
+    padding: 0;
     margin: 100px;
     width: 200px;
-    height: 200px;
+    min-height: 100px;
+    max-height: 240px;
     animation: neonlamp 3s alternate forwards ease-in-out;
 }
 
 .fonte-neon{
-    width: 600px;
-    height: 160px;
+    min-width: 300px;
+    max-width: 600px;
+    min-height: 100px;
+    max-height: 200px;
+    
+    
     --cor-font: rgb(255, 244, 229);
     animation: neonfont 3s alternate forwards ease-in-out;
 }
@@ -29,6 +36,8 @@
 .logopne-lamp{
     --cor-neon:#ffa622;
 }
+
+
 
 @keyframes neonfont{
     from{
