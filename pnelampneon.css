@@ -11,9 +11,23 @@ h3{
     
 }
 
+.caixa-externo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    align-items: center;
 
+}
+
+.caixa-interno{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    align-items: center;
+}
 .caixa{
-    
     margin: 200px;
     min-height: 180px;
     max-height: 500px;
@@ -22,7 +36,8 @@ h3{
 }
 
 .logopne-lamp{
-    margin: 100px;
+    margin: 50px;
+    height: 200px;
     min-width: 100px;
     max-width: 200px;
     min-height: 100px;
@@ -31,6 +46,7 @@ h3{
 }
 
 .fonte-neon{
+    width: 200px;
     min-width: 200px;
     max-width: 600px;
     min-height: 100px;
