@@ -41,9 +41,6 @@ var perguntas = [
 ];
 
 
-
-// <----------(Falta criar a função para percorrer o Array e mostrar a pergunta)----->
-
 function arrayPerguntas(array){
     var contador = 1;
     var respostas = entradaDados.question('\n Pergunta de Numero '+contador+'\n'+array.pergunta);
@@ -62,6 +59,8 @@ const randomPerguntas = perguntas.sort(() => Math.random() - 0.5);
 const perguntasSelecionadas = randomPerguntas.slice(0, 10);
 perguntasSelecionadas.forEach(arrayPerguntas);
 
+
+// Criar uma função aqui !
 
 if (acertos == 10){
     console.log('Parabéns, Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU');
