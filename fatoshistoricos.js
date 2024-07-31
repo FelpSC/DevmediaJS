@@ -41,16 +41,20 @@ var perguntas = [
 ];
 
 
+var contador = 1;
+var acertos = 0;
+
+
 function arrayPerguntas(array){
-    var contador = 1;
+    
     var respostas = entradaDados.question('\n Pergunta de Numero '+contador+'\n'+array.pergunta);
-    var acertos = 0;
     contador++
 
     if ( respostas === array.resposta){
-        acertos + 1;
+        acertos = acertos + 1;
     }else{
-        acertos + 0;
+        console.log('Resposta Errada; Resposta certa: '+array.resposta);
+        acertos = acertos + 0;
     }
 
 }
@@ -63,16 +67,16 @@ perguntasSelecionadas.forEach(arrayPerguntas);
 // Criar uma função aqui !
 
 if (acertos == 10){
-    console.log('Parabéns, Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU');
+    console.log('Parabéns '+jogador+'! Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU');
     
 }else if (acertos >= 6 && acertos <= 9){
-    console.log('Parabéns! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz!');
+    console.log('Parabéns '+jogador+'! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz!');
 
 }else if( acertos >= 3 && acertos <= 5){
-    console.log('Perdeu Alguns Filmes/Séries? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU');
+    console.log('Perdeu Alguns Filmes/Séries '+jogador+'? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU');
 
 }else if( acertos == 0 && acertos <= 2){
-    console.log('Mané, some daqui meu! Acertando '+acertos+'/10? Namoral!');
+    console.log(jogador+', some daqui meu! Acertando '+acertos+'/10? Namoral!');
 
 }
 
