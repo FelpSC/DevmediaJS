@@ -1,4 +1,5 @@
 import entradaDados from 'readline-sync';
+opcoesInicio()
 
 function opcoesInicio (){
     console.log('------------QUIZ DE CONHECIMENTOS GERAI--------------\n');
@@ -16,13 +17,14 @@ function opcoesInicio (){
 }
 
 
+
 function inicioQuiz(){
     console.log('------------QUIZ DE CONHECIMENTOS GERAI--------------\n');
     var jogador = entradaDados.question("Insira seu nome\n");
     console.log('Seja bem vindo '+jogador+'! vamos começar\n');
-}
 
-function Quiz(){
+
+
     var perguntas = [
         { id:1, pergunta:'Qual o Nome do Heroi Tagarela?\n', resposta:'DeadPool'},
         { id:2, pergunta:'Qual o Nome do Heroi Amigo da Vizinhanca?\n', resposta:'Homem-Aranha'},
@@ -60,7 +62,7 @@ function Quiz(){
 
     var contador = 1;
     var acertos = 0;
-    var pontuacao = acertos;
+    // var pontuacao = acertos;
 
 
     function arrayPerguntas(array){
@@ -85,19 +87,57 @@ function Quiz(){
 
     if (acertos == 10){
         console.log('Parabéns '+jogador+'! Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU');
+        opcoesInicio()
         
     }else if (acertos >= 6 && acertos <= 9){
         console.log('Parabéns '+jogador+'! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz!');
+        opcoesInicio()
 
     }else if( acertos >= 3 && acertos <= 5){
         console.log('Perdeu Alguns Filmes/Séries '+jogador+'? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU');
+        opcoesInicio()
 
     }else if( acertos == 0 && acertos <= 2){
         console.log(jogador+', some daqui meu! Acertando '+acertos+'/10? Namoral!');
+        opcoesInicio()
 
     }
 
 }
+
+// Função para Criar o Ranking de Jogadores
+
+var ranking = [
+    {nome:'felp', pontuacao:'1'},
+
+];
+
+
+
+function addRanking (placarRank){
+    const addJogador = {
+        nome: placarRank.nome,
+        pontuacao: placarRank.acertos,
+    }
+
+    return addJogador;
+
+}
+
+ranking.push(addRanking);
+
+function rankingJogadores() {
+    console.log(ranking);
+    opcoesInicio()
+}
+
+
+
+
+
+
+
+
 
 
 
