@@ -49,9 +49,9 @@ const arraysplice = [
   'Sexta',
 ]
 
-arraysplit.splice(2,1); //COLECAO + FUNCAO (2,1); (posição no Array + número de elementos)
+arraysplice.splice(2,1); //COLECAO + FUNCAO (2,1); (posição no Array + número de elementos)
 
-console.log(arraysplit); // Vai remover "Terça"
+console.log(arraysplice); // Vai remover "Terça"
 
 // pop() = Remove o primeiro elemento do Array
 // shift() = Remove o ultimo elemento do Array

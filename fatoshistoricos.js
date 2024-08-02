@@ -1,4 +1,13 @@
 import entradaDados from 'readline-sync';
+
+
+var ranking = [
+    {nome:'felp', pontuacao:'1'},
+
+];
+
+ranking.sort();
+
 opcoesInicio()
 
 function opcoesInicio (){
@@ -8,7 +17,10 @@ function opcoesInicio (){
     if (opcoes == 1 ){
         inicioQuiz();
     }else if (opcoes == 2){
-        rankingJogadores();
+        console.log(ranking);
+        opcoesInicio()
+        
+
     }else{
         console.log("Opcao invalida!");
         opcoesInicio();
@@ -19,7 +31,7 @@ function opcoesInicio (){
 
 
 function inicioQuiz(){
-    console.log('------------QUIZ DE CONHECIMENTOS GERAI--------------\n');
+    console.log('------------ QUIZ M C U --------------\n');
     var jogador = entradaDados.question("Insira seu nome\n");
     console.log('Seja bem vindo '+jogador+'! vamos começar\n');
 
@@ -83,53 +95,60 @@ function inicioQuiz(){
     const perguntasSelecionadas = randomPerguntas.slice(0, 10);
     perguntasSelecionadas.forEach(arrayPerguntas);
 
+
     // Criar uma função aqui !
 
     if (acertos == 10){
-        console.log('Parabéns '+jogador+'! Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU');
+        console.log('Parabéns '+jogador+'! Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU \n');
+        criaRanking(jogador, acertos)
         opcoesInicio()
         
     }else if (acertos >= 6 && acertos <= 9){
-        console.log('Parabéns '+jogador+'! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz!');
+        console.log('Parabéns '+jogador+'! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz! \n');
+        criaRanking(jogador, acertos)
         opcoesInicio()
 
     }else if( acertos >= 3 && acertos <= 5){
-        console.log('Perdeu Alguns Filmes/Séries '+jogador+'? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU');
+        console.log('Perdeu Alguns Filmes/Séries '+jogador+'? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU \n');
+        criaRanking(jogador, acertos)
         opcoesInicio()
 
     }else if( acertos == 0 && acertos <= 2){
-        console.log(jogador+', some daqui meu! Acertando '+acertos+'/10? Namoral!');
+        console.log(jogador+', some daqui meu! Acertando '+acertos+'/10? Namoral! \n');
+        criaRanking(jogador, acertos)
         opcoesInicio()
 
     }
 
+
 }
-
-// Função para Criar o Ranking de Jogadores
-
-var ranking = [
-    {nome:'felp', pontuacao:'1'},
-
-];
-
 
 
 function addRanking (placarRank){
     const addJogador = {
         nome: placarRank.nome,
-        pontuacao: placarRank.acertos,
+        pontuacao: placarRank.pontuacao,
     }
 
     return addJogador;
 
 }
 
-ranking.push(addRanking);
 
-function rankingJogadores() {
-    console.log(ranking);
-    opcoesInicio()
+
+function criaRanking( jogador , acertos){
+    const novoJogador = addRanking({nome: jogador, pontuacao: acertos});
+    ranking.push(novoJogador);
+   
+
 }
+
+    
+
+// Função para Criar o Ranking de Jogadores
+
+
+
 
 
 
