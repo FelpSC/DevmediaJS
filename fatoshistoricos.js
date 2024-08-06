@@ -1,10 +1,14 @@
 import entradaDados from 'readline-sync';
 
+// Cria-se o Ranking antes de tudo, para depois ser atualizado.
 
 var ranking = [
     {nome:'felp', pontuacao:'1'},
 
 ];
+
+
+// .sort() vai organizar o ranking
 
 ranking.sort();
 
@@ -74,8 +78,10 @@ function inicioQuiz(){
 
     var contador = 1;
     var acertos = 0;
-    // var pontuacao = acertos;
+    
 
+    // Sessão da função principal das perguntas.
+    // - function arraPerguntas(array) aonde "array" é a coleção 'perguntas'
 
     function arrayPerguntas(array){
         
@@ -91,37 +97,59 @@ function inicioQuiz(){
 
     }
 
+    // sessão para organizar as perguntar a serem exibidas
+    // - randomPerguntas: Embaralha as perguntas após e as organizadas númericamente.
+    // - perguntasSelecionadas: pega as perguntas randomizadas e seleciona 10.
+    // - forEach vai ser feito um laço de repetição em uma função (arrayPerguntas) sitadas anteriormente. .
+
     const randomPerguntas = perguntas.sort(() => Math.random() - 0.5);
     const perguntasSelecionadas = randomPerguntas.slice(0, 10);
     perguntasSelecionadas.forEach(arrayPerguntas);
 
 
-    // Criar uma função aqui !
+    // 
 
     if (acertos == 10){
         console.log('Parabéns '+jogador+'! Você teve um total de ' +acertos+'/10 Acertos! Você sabe tudo sobre o MCU \n');
-        criaRanking(jogador, acertos)
+        criaRanking(jogador, acertos) //Gera um relatório no final com nome do jogador e a pontuação
         opcoesInicio()
         
     }else if (acertos >= 6 && acertos <= 9){
         console.log('Parabéns '+jogador+'! Você teve um total de '+acertos+'/10 Acertos! Faltou Pouco para ter matado todo o Quiz! \n');
-        criaRanking(jogador, acertos)
+        criaRanking(jogador, acertos) //Gera um relatório no final com nome do jogador e a pontuação
         opcoesInicio()
 
     }else if( acertos >= 3 && acertos <= 5){
         console.log('Perdeu Alguns Filmes/Séries '+jogador+'? Você teve um total de '+acertos+'/10, Precisa estudar mais do MCU \n');
-        criaRanking(jogador, acertos)
+        criaRanking(jogador, acertos) //Gera um relatório no final com nome do jogador e a pontuação
         opcoesInicio()
 
     }else if( acertos == 0 && acertos <= 2){
         console.log(jogador+', some daqui meu! Acertando '+acertos+'/10? Namoral! \n');
-        criaRanking(jogador, acertos)
-        opcoesInicio()
+        criaRanking(jogador, acertos) //Gera um relatório no final com nome do jogador e a pontuação
+        opcoesInicio() // Nome e Pontuação no Ranking, joga o player para o inicio, lá ele pode consultar o ranking na opção 2
 
     }
 
 
 }
+
+// Funções para Gerar o Ranking dos Jogadores:
+
+// criaRanking: Vai gerar o ranking com os parametros (jogador e acertos), 
+// - ranking.push(variavel) adiciona o novo jogador com os parametros informados
+
+
+
+function criaRanking( jogador , acertos){
+    const novoJogador = addRanking({nome: jogador, pontuacao: acertos});
+    ranking.push(novoJogador);
+   
+
+}
+
+// addRanking: vai jogar as informações do jogador e pontuação na coleção, 
+// por isso na função "criaRanking" já há parametros informados.
 
 
 function addRanking (placarRank){
@@ -135,17 +163,9 @@ function addRanking (placarRank){
 }
 
 
-
-function criaRanking( jogador , acertos){
-    const novoJogador = addRanking({nome: jogador, pontuacao: acertos});
-    ranking.push(novoJogador);
-   
-
-}
-
     
 
-// Função para Criar o Ranking de Jogadores
+
 
 
 
