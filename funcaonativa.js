@@ -37,7 +37,7 @@ console.log(array);
 
 // splice(), pop() e shift()
 
-// split() : Remove elementos de um Array com base em posição
+// splice() : Remove elementos de um Array com base em posição
 // Exemplo : 
   
 const arraysplice = [
@@ -49,9 +49,9 @@ const arraysplice = [
   'Sexta',
 ]
 
-arraysplice.splice(2,1); //COLECAO + FUNCAO (2,1); (posição no Array + número de elementos)
+arraysplit.splice(2,1); //COLECAO + FUNCAO (2,1); (posição no Array + número de elementos)
 
-console.log(arraysplice); // Vai remover "Terça"
+console.log(arraysplit); // Vai remover "Terça"
 
 // pop() = Remove o primeiro elemento do Array
 // shift() = Remove o ultimo elemento do Array
