@@ -16,7 +16,7 @@ opcoesInicio()
 
 function opcoesInicio (){
     console.log('------------QUIZ DE CONHECIMENTOS GERAI--------------\n');
-    var opcoes = entradaDados.question("Selecione uma das opcoes:\n 1 - Inicio Quiz \n 2 - Ranking de Jogadores \n");
+    var opcoes = entradaDados.question("Selecione uma das opcoes:\n 1 - Inicio Quiz \n 2 - Ranking de Jogadores \n 3 - x1 De Perguntas (1x1) \n");
 
     if (opcoes == 1 ){
         inicioQuiz();
@@ -24,7 +24,9 @@ function opcoesInicio (){
         console.log(ranking);
         opcoesInicio()
         
+    // }else if  ( opcoes == 3){
 
+    // }
     }else{
         console.log("Opcao invalida!");
         opcoesInicio();
@@ -163,7 +165,6 @@ function addRanking (placarRank){
 }
 
 
-    
 
 
 
