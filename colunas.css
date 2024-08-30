@@ -1,23 +1,30 @@
+
+
 .quadrado{
+    display: flex;
     width: 200px;
     height: 200px;
     border: 1px solid black;
     background-color: gray;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .div-principal{
-    margin: 200px;
-    border: 1px solid black;
+    margin-top: 200px;
+    border: 0.2px solid black;
+    border-radius: 10px;
     min-height: 400px;
     max-height: 800px;
+
 }
+
 
 .div-secundaria{
     padding: 50px;
     width: 200px;
-
     min-height: 400px;
     max-height: 800px;
     display: flex;
@@ -27,22 +34,51 @@
 }
 
 .quadrado1:hover{
- background-color: white;
- transition: 1000ms;
+    font-size: 50px;
+    background-color: white;
+    transition: 1000ms;
+    border: 1px solid ;
 
 }
+
+
 .quadrado2:hover{
+    font-size: 60px;
+    color: black;
+    font-family: sans-serif;
+    background-color: brown;
+    transition-duration: 3000ms;
     
 }
 .quadrado3:hover{
+    font-size: 60px;
+    color: black;
+    font-family: sans-serif;
+    background-color: brown;
+    transition-duration: 3000ms;
     
 }
 .quadrado4:hover{
+    font-size: 60px;
+    color: black;
+    font-family: sans-serif;
+    background-color: brown;
+    transition-duration: 3000ms;
     
 }
 .quadrado5:hover{
+    font-size: 60px;
+    color: black;
+    font-family: sans-serif;
+    background-color: brown;
+    transition-duration: 3000ms;
     
 }
 .quadrado6:hover{
+    font-size: 80px;
+    color: black;
+    font-family: sans-serif;
+    background-color: brown;
+    transition-duration: 3000ms;
     
 }
