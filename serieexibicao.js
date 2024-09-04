@@ -1,9 +1,11 @@
 import retornaSerieDia from "./seriefuncoes/seriefuncoes.js";
-import serie from "./seriedados/seriedados.js";
+import dias from "./serieodia/seriedias.js";
 
 let data = new Date()
 let diaSemana = data.getDay()
+let dia = dias;
 
-let serieDoDia = retornaSerieDia(serie, diaSemana);
+let serieDoDia = retornaSerieDia(diaSemana);
 
 console.log(serieDoDia);
+console.log(dia);
