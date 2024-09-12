@@ -1,20 +1,30 @@
-const dataHoje = new Date();
-const dataNatal = new Date('2030-12-25T00:00');
+let alunos = [
+    {nome: 'Malu', idade: 17},
+    {nome: 'Luana', idade: 17},
+    {nome: 'Gustavo', idade: 18},
+    {nome: 'Julia', idade: 18}
+];
 
-const timeHoje = dataHoje.getTime();
-const timeNatal = dataNatal.getTime();
-
-const tempoFalta = timeNatal - timeHoje;
-
-const segundos = tempoFalta / 1000;
-const minutos = segundos / 60;
-const horas = minutos / 60;
-
-if(horas > 1)
-{
-    console.log("Faltam "+horas.reduce(2)+" horas para o Natal de 2030");
+function verificaAlunosMaiores(aluno) {
+    return (aluno.idade > 17);
 }
-else
-{
-    console.log("Falta "+horas.reduce(2)+" hora para o Natal de 2030");
+
+function filtraAlunosMaiores(alunos) {
+    let alunosFiltro = alunos.filter(verificaAlunosMaiores);
+    return alunosFiltro;
 }
+
+function retornaNomesAlunos(alunos) {
+    let nomes = alunos.filter(aluno => aluno.nome)
+    return nomes;
+}
+
+function imprimeNomesAlunos (arrayNomes) {
+    arrayNomes.forEach(nome => {
+        console.log(nome);
+    });
+}
+
+let alunosMaiores = verificaAlunosMaiores(alunos);
+let nomesAlunos = retornaNomesAlunos(alunosMaiores);
+imprimeNomesAlunos(nomesAlunos);
