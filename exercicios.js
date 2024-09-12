@@ -1,30 +1,18 @@
-let alunos = [
-    {nome: 'Malu', idade: 17},
-    {nome: 'Luana', idade: 17},
-    {nome: 'Gustavo', idade: 18},
-    {nome: 'Julia', idade: 18}
-];
+let tabela = [
+    {time: "Azul", pontos: 46}, 
+    {time: "Amarelo", pontos: 39},
+    {time: "Verde", pontos: 52}, 
+    {time: "Rosa", pontos: 49}, 
+    {time: "Laranja", pontos: 37}, 
+    {time: "Roxo", pontos: 23}
+    ];
 
-function verificaAlunosMaiores(aluno) {
-    return (aluno.idade > 17);
+function verificaTimesClassificados (time){
+    return (time.pontos >= 40);
 }
 
-function filtraAlunosMaiores(alunos) {
-    let alunosFiltro = alunos.filter(verificaAlunosMaiores);
-    return alunosFiltro;
-}
+let timesClassificados = tabela.filter(verificaTimesClassificados);
 
-function retornaNomesAlunos(alunos) {
-    let nomes = alunos.filter(aluno => aluno.nome)
-    return nomes;
-}
-
-function imprimeNomesAlunos (arrayNomes) {
-    arrayNomes.forEach(nome => {
-        console.log(nome);
-    });
-}
-
-let alunosMaiores = verificaAlunosMaiores(alunos);
-let nomesAlunos = retornaNomesAlunos(alunosMaiores);
-imprimeNomesAlunos(nomesAlunos);
+timesClassificados.forEach( time => {
+    console.log(time.time.toUpperCase());
+});
